@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled from "styled-components";
+import Car from "./Car";
+
+
+const Button = styled.button`
+color: blue;
+background: red;
+text-transform: uppercase;
+`
+
+const Input = styled.input`
+border-color:red;
+
+`
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <label for="username">Username:</label>
+     <Input type= "text" name="username" required="required"/> 
+     <label for="password">Password:</label>
+     <Input type="password" name="password" />
+     <Button>submit</Button>
+     <Car />
     </div>
   );
 }
